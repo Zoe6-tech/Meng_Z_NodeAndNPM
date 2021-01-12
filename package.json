@@ -2,7 +2,7 @@
   "name": "meng_z_nodeandnpm",
   "version": "1.0.0",
   "description": "learning node and npm",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Hello from Node!!!\"",
     "start": "nodemon app"
