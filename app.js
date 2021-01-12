@@ -3,7 +3,7 @@ const http = require('http');// give http package
 // require() is more or less the same as a JS import, just like PHP require
 
 const hostname = '127.0.0.1';// this is localhost
-const port = 3000;//localhost：3000
+const port = process.env.PORT || 3000;//localhost：3000
 
 const server = http.createServer((req, res) => {//request to URL , and responce back
   res.statusCode = 200;
