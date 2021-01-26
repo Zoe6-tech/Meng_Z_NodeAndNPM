@@ -1,4 +1,4 @@
-const express = require('express');// give http package
+const express = require('express');// give http package, like php require
 
 const server = express();
 const path = require('path');
@@ -11,12 +11,12 @@ server.use(express.static(path.join(__dirname, 'public')));//base on URL, look a
  
 server.get("/", (req, res) => {
   console.log('you have now hit the home route');
-  res.sendFile('views/index.html');
+  res.sendFile(path.join(__dirname,'views/index.html'));//localhost:3000/views/index.html
 })
 
 server.get("/contact", (req, res) => {
   console.log('hit the contact route');
-  res.sendFile('contact.html');
+  res.sendFile(path.join(__dirname,'views/contact.html'));
 })
 
 const port = process.env.PORT || 3000;//localhost：3000
